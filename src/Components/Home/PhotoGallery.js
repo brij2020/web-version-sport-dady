@@ -22,7 +22,7 @@ import img20 from '../../assets/images/img20.png';
 import img21 from '../../assets/images/img21.png';
 
 import Gallery from 'react-photo-gallery';
-
+import PhotoStory  from '../photo-story/PhotoStory'
 const photos = [
     {
         src: usteam,
@@ -98,9 +98,10 @@ const photos = [
 const PhotoGallery = () => {
     return (
         <div>
-            <Gallery
+            {/* <Gallery
                 direction={"column"}
-                photos={photos} />
+                photos={photos} /> */}
+                <PhotoStory />
         </div>
     )
 }
