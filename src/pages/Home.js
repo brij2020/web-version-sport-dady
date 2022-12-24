@@ -546,7 +546,7 @@ function Home() {
 
       </AnimationOnScroll>
 
-      {/*cricket news Editorials */}
+      {/*cricket news Editorials 
       <AnimationOnScroll animateIn="animate__pulse ">
         <div className='bg-section'>
           <h2 className='heading'>Cricket News and Editorials</h2>
@@ -606,7 +606,7 @@ function Home() {
         </div>
 
       </AnimationOnScroll>
-
+    */}
       {/* India National Cricket Team */}
       <AnimationOnScroll animateIn="animate__fadeInBottomRight ">
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
