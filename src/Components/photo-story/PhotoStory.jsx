@@ -44,22 +44,20 @@ const PhotoStory = (props) => {
 
     }
     
-    React.useEffect(() => {
-        clearTimeout(timer.current);
-        timer.current = setTimeout(() => {
-            if (activeIndex < slides.length - 1) {
-                next();
-            } else {
-                console.log("End of Story");
-                toaster("End of Story for Today! &#128526;", "info");
+    // React.useEffect(() => {
+    //     clearTimeout(timer.current);
+    //     timer.current = setTimeout(() => {
+    //         if (activeIndex < slides.length - 1) {
+    //             next();
+    //         } else {
+    //             console.log("End of Story");
+    //             toaster("End of Story for Today! &#128526;", "info");
 
-                // setCookie('F5_Daily', true);  // Set cookies - daily seen
-                // deleteCookie('EntryPageID'); // Remove temp "entry" URL cookie
-                // setTimeout( redirect(entryURL), 50); // Redirect to corresponding page
-            }
-        }, slides[activeIndex]?.timeOut);
+
+    //         }
+    //     }, slides[activeIndex]?.timeOut);
     
-    })
+    // })
     const prev = () => {
         if (activeIndex === 0) {
             setActiveIndex(0);
@@ -74,53 +72,50 @@ const PhotoStory = (props) => {
             
             document.body.classList.add('menu-open');
             setContextMenuState(true);
-            cancelAnimation();
-            pauseVideo();
         } else {
             setContextMenuState(false)
-
             document.body.classList.remove('menu-open');
         }
     }
     // Check if Slide contains video
-    function isVideo() {
-        return slides[activeIndex].classList.contains("video");
-    }
+    // function isVideo() {
+    //     return slides[activeIndex].classList.contains("video");
+    // }
 
-    function pauseVideo() {
-        if (isVideo()) {
-            const v = slides[activeIndex].querySelector("video");
-            v.muted = true;
-            v.pause();
-        }
-    }
+    // function pauseVideo() {
+    //     if (isVideo()) {
+    //         const v = slides[activeIndex].querySelector("video");
+    //         v.muted = true;
+    //         v.pause();
+    //     }
+    // }
 
-    function playVideo() {
-        if (isVideo()) {
-            const v = slides[activeIndex].querySelector("video");
-            v.muted = true;
-            v.play();
-        }
-    }
+    // function playVideo() {
+    //     if (isVideo()) {
+    //         const v = slides[activeIndex].querySelector("video");
+    //         v.muted = true;
+    //         v.play();
+    //     }
+    // }
 
-    function stopVideo() {
-        if (isVideo()) {
-            const v = slides[activeIndex].querySelector("video");
-            v.pause();
-            v.currentTime = 0;
-        }
-    }
+    // function stopVideo() {
+    //     if (isVideo()) {
+    //         const v = slides[activeIndex].querySelector("video");
+    //         v.pause();
+    //         v.currentTime = 0;
+    //     }
+    // }
 
-    function toggleMute() {
-        if (isVideo()) {
-            const v = slides[activeIndex].querySelector("video");
-            v.muted = !v.muted;
-        }
-    }
+    // function toggleMute() {
+    //     if (isVideo()) {
+    //         const v = slides[activeIndex].querySelector("video");
+    //         v.muted = !v.muted;
+    //     }
+    // }
 
-    function cancelAnimation() {
-        clearTimeout(timer.current);
-    }
+    // function cancelAnimation() {
+    //     clearTimeout(timer.current);
+    // }
     return (
         <main role="main">
 
